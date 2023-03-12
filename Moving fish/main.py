@@ -5,7 +5,7 @@ file = open("fish.txt","r")
 content = file.readlines()
 file.close()
 
-indents = 2
+indents = 1
 fish1 = content[0:4]
 fish2 = content[5:9]
 print(fish1)
@@ -17,9 +17,9 @@ while True:
     if indents == 0:
         currentfish = fish1
         indents += 1
-    elif indents == 5:
+    elif indents == 10:
         currentfish = fish2
         indents -= 1
     for line in currentfish:
-        print("/t"*indents,line)
-    time.sleep(2)
+        print("\t"*indents,line)
+    time.sleep(0.5)
